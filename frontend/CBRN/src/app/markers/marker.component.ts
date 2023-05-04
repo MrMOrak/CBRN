@@ -23,12 +23,13 @@ export class MarkerComponent{
 
   addMarker() {
     const newMarker = marker(
-      [ this.lat, this.lng ],
+      //[ this.lat, this.lng ],
+      [this.lat, this.lng],
       {
         icon: icon({
-          iconSize: [ 25, 41 ],
+          iconSize: [ 30, 30 ],
           iconAnchor: [ 13, 41 ],
-          iconUrl: 'assets/leaflet/marker-icon.png',
+          iconUrl: "./../../assets/marker-red.png",
           iconRetinaUrl: 'assets/leaflet/marker-icon-2x.png',
           shadowUrl: 'assets/leaflet/marker-shadow.png'
         })
