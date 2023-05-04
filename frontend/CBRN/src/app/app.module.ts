@@ -7,6 +7,7 @@ import {LeafletModule} from "@asymmetrik/ngx-leaflet";
 import {MapComponent} from "./maps/map.component";
 import {FormsModule} from "@angular/forms";
 import {MarkerComponent} from "./markers/marker.component";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MarkerComponent} from "./markers/marker.component";
     BrowserModule,
     AppRoutingModule,
     LeafletModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
