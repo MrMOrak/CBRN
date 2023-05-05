@@ -8,20 +8,23 @@ import {MapComponent} from "./maps/map.component";
 import {FormsModule} from "@angular/forms";
 import {MarkerComponent} from "./markers/marker.component";
 import {HttpClientModule} from "@angular/common/http";
-
+import {DashboardComponent} from "./dashboards/dashboard.component";
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    MarkerComponent
+    MarkerComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LeafletModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

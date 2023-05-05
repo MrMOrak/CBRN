@@ -1,17 +1,32 @@
 
 <h1 class="card-title">5 Maps</h1>
 
-<p>
-  Here are 5 example maps using colored markers to show the pollution level of the area
-</p>
 
-<leafletMap></leafletMap>
-<br>
-<leafletMap></leafletMap>
-<br>
-<leafletMap></leafletMap>
-<br>
-<leafletMap></leafletMap>
-<br>
 <marker [lat]="51.49118863428682" [lng]="7.226257324218751"></marker>
+
+
+<!---Test tabs-->
+<!---
+<mat-tab-group headerPosition="below">
+  <mat-tab label="Fahrzeug 1" >
+    <div>
+  <marker [lat]="51.49118863428682" [lng]="7.226257324218751"></marker>
+    </div>
+  </mat-tab>
+  <mat-tab label="Fahrzeug 2">
+    <marker [lat]="51.49118863428682" [lng]="7.226257324218751"></marker>
+  </mat-tab>
+  <mat-tab label="Fahrzeug 3">
+    <marker [lat]="51.49118863428682" [lng]="7.226257324218751"></marker>
+  </mat-tab>
+  <mat-tab label="Fahrzeug 4">
+    <marker [lat]="51.49118863428682" [lng]="7.226257324218751"></marker>
+  </mat-tab>
+  <mat-tab label="Fahrzeug 5">
+    <marker [lat]="51.49118863428682" [lng]="7.226257324218751"></marker>
+  </mat-tab>
+</mat-tab-group>
+----->
+
+
 <router-outlet></router-outlet>
