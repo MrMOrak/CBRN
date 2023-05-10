@@ -10,13 +10,16 @@ import {MarkerComponent} from "./markers/marker.component";
 import {HttpClientModule} from "@angular/common/http";
 import {DashboardComponent} from "./dashboards/dashboard.component";
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {GridComponent} from "./gridview/grid.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
     MarkerComponent,
-    DashboardComponent
+    DashboardComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     LeafletModule,
     FormsModule,
     HttpClientModule,
-    MatTabsModule
+    MatTabsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

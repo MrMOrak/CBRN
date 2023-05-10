@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="./grid.css">
+
+<mat-grid-list cols="6" rowHeight="300px">
+  <mat-grid-tile
+    [colspan]="5"
+    [rowspan]="2"
+    [style.background-color]="'lightgrey'">
+      <marker [lat]="51.49" [lng]="7.3"></marker>
+  </mat-grid-tile>
+  <mat-grid-tile
+    [colspan]="1"
+    [rowspan]="2"
+    [style.background-color]="'yellow'">
+    Chat
+  </mat-grid-tile>
+  <mat-grid-tile
+    [colspan]="3"
+    [rowspan]="1"
+    [style.background-color]="'magenta'">
+    tile 3
+  </mat-grid-tile>
+  <mat-grid-tile
+    [colspan]="3"
+    [rowspan]="1"
+    [style.background-color]="'lightblue'">
+    tile 2
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,10 @@
+.grid-layout-custom{
+  width: 50vw;
+  height: 50vh;
+}
+
+marker{
+  display: inline-block;
+  box-sizing: border-box;
+  width: stretch;
+}

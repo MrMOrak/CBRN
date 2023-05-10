@@ -2,6 +2,7 @@
       integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
       crossorigin=""/>
 
+
 <div class="card">
   <div class="card-body">
 
@@ -53,7 +54,8 @@
     </div>
 
     <!-- Map -->
-    <div leaflet style="height: 800px;"
+    <div leaflet style="height: 400px;"
+         leafletFitBoundsOptions="true"
          [leafletOptions]="options"
          [leafletLayers]="markers"
     >
