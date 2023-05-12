@@ -22,8 +22,42 @@ export class MarkerComponent {
     center: latLng(51.49118863428682, 7.226257324218751)
   };
 
-  markers: Layer[] = [];
   selectedColor : string = "./../../assets/marker-green.png";
+
+  markerGreen = marker(latLng(51.5, 7.3),{
+    icon: icon({
+      iconUrl:this.selectedColor,
+      iconSize: [30, 30],
+      iconAnchor: [13, 41]
+    })
+  });
+
+  markerGreen2 = marker(latLng(51.78, 7.3),{
+    icon: icon({
+      iconUrl:this.selectedColor,
+      iconSize: [30, 30],
+      iconAnchor: [13, 41]
+    })
+  });
+
+  markerYellow = marker(latLng(52, 7.4),{
+    icon: icon({
+      iconUrl:"./../../assets/marker-yellow.png",
+      iconSize: [30, 30],
+      iconAnchor: [13, 41]
+    })
+  });
+
+  markerRed = marker(latLng(51.3, 7.2),{
+    icon: icon({
+      iconUrl:"./../../assets/marker-red.png",
+      iconSize: [30, 30],
+      iconAnchor: [13, 41]
+    })
+  });
+
+
+  markers: Layer[] = [this.markerGreen,this.markerGreen2, this.markerYellow, this.markerRed];
 
   addMarker() {
     const newMarker = marker(
@@ -33,9 +67,7 @@ export class MarkerComponent {
         icon: icon({
           iconSize: [30, 30],
           iconAnchor: [13, 41],
-          iconUrl: this.selectedColor,
-          iconRetinaUrl: 'assets/leaflet/marker-icon-2x.png',
-          shadowUrl: 'assets/leaflet/marker-shadow.png'
+          iconUrl: this.selectedColor
         })
       }
     );
