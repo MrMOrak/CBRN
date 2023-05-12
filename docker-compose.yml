@@ -16,6 +16,8 @@ services:
       - "8020:8020"
     volumes:
       - ./target:/app
+    expose:
+      - 8020
   db:
     container_name: pg_container
     build:
@@ -31,7 +33,7 @@ services:
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
       # copy the sql script to create tables
-      - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./sql/create_tables.sql/docker-entrypoint-initdb.d:/create_tables.sql
   pgadmin:
     container_name: pgadmin4_container
     image: dpage/pgadmin4
@@ -43,11 +45,10 @@ services:
       - "5050:80"
   frontend:
     container_name: leaflet_nodejs
-    image: "node:8"
-    working_dir: /home/node/app
+    build:
+      context: .
+      dockerfile: Dockerfile-frontend
     volumes:
       - ./:/home/node/app
     expose:
-      - "8081"
-    command:
-      - "npm start"
+      - "4200:80"
