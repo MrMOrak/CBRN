@@ -23,6 +23,5 @@
 hs_err_pid*
 
 postgres-data/
-sql/
 target/
 .idea/
